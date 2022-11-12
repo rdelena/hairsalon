@@ -1,9 +1,13 @@
 * {
   box-sizing: border-box;
 }
+html,
 body {
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 .navbar {
   display: flex;
@@ -53,14 +57,12 @@ body {
   display: grid;
   height: 100vh;
   width: 100%;
-  grid-template-columns: 10% auto auto 10%;
-  grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr;
+  grid-template-columns: 15% 35% 35% 15%;
+  grid-template-rows: 1fr 1fr 1fr 0.5fr;
   grid-template-areas:
     "... art1 art1 ..."
     "... art2 art2 ..."
     "... art3 art4 ..."
-    "... art3 art4 ..."
-    "... art3 art5 ..."
     "footer footer footer footer";
   grid-gap: 1em;
 }
@@ -71,6 +73,7 @@ body {
   height: 350px;
   border: #24252a solid;
   margin: auto;
+  width: 100%;
 }
 .article1 h1 {
   font-size: 50px;
@@ -83,19 +86,55 @@ body {
   background-color: blue;
   grid-area: art2;
   display: flex;
+  break-inside: avoid-column;
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  padding: 0;
+}
+.article2 img {
+  height: 250px;
+  width: 265px;
+  border: #24252a solid;
+}
+.article2 li {
+  padding: 0.5em;
 }
 .article3 {
   background-color: yellow;
   grid-area: art3;
+  display: block;
+  text-align: center;
+  border: #24252a solid;
+}
+.article3 h2 {
+  background-color: #24252a;
+  color: white;
+}
+.article3 img {
+  height: 150px;
+  width: 100px;
+  float: left;
 }
 .article4 {
-  background-color: green;
   grid-area: art4;
+  display: flex;
+  flex-direction: column;
 }
-.article5 {
+.hairstyle {
+  background-color: green;
+  margin-bottom: 1em;
+  border: #24252a solid;
+}
+.advertisement {
   background-color: purple;
-  grid-area: art5;
   height: 200px;
+  border: #24252a solid;
+}
+.advertisement img {
+  height: 200px;
+  width: 150px;
+  float: left;
 }
 footer {
   background-color: #24252a;
@@ -172,7 +211,6 @@ footer {
       "art2"
       "art3"
       "art4"
-      "art5"
       "footer";
   }
 }
