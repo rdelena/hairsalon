@@ -49,54 +49,6 @@ body {
   background-color: white;
   border-radius: 10px;
 }
-.container {
-  display: grid;
-  height: 100vh;
-  width: 100%;
-  grid-template-columns: 10% auto auto 10%;
-  grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr;
-  grid-template-areas:
-    "... art1 art1 ..."
-    "... art2 art2 ..."
-    "... art3 art4 ..."
-    "... art3 art4 ..."
-    "... art3 art5 ..."
-    "footer footer footer footer";
-  grid-gap: 1em;
-}
-.article1 {
-  background-color: red;
-  grid-area: art1;
-  display: flex;
-  height: 350px;
-  border: #24252a solid;
-  margin: auto;
-}
-.article1 h1 {
-  font-size: 50px;
-  margin: 0;
-  line-height: 40px;
-  padding: 100px 30px 30px;
-  text-align: center;
-}
-.article2 {
-  background-color: blue;
-  grid-area: art2;
-  display: flex;
-}
-.article3 {
-  background-color: yellow;
-  grid-area: art3;
-}
-.article4 {
-  background-color: green;
-  grid-area: art4;
-}
-.article5 {
-  background-color: purple;
-  grid-area: art5;
-  height: 200px;
-}
 footer {
   background-color: #24252a;
   color: white;
@@ -159,20 +111,5 @@ footer {
   }
   .navbar-links.active {
     display: flex;
-  }
-  .container {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    width: 100%;
-    gap: 0.5em;
-    max-height: fit-content;
-    grid-template-areas:
-      "art1"
-      "art2"
-      "art3"
-      "art4"
-      "art5"
-      "footer";
   }
 }
