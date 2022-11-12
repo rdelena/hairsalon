@@ -1,6 +1,6 @@
-const placeForResults = document.getElementById("results");
+const toggleButton = document.getElementsByClassName("toggle-nav")[0];
+const navbarLinks = document.getElementsByClassName("navbar-links")[0];
 
-new URLSearchParams(window.location.search).forEach((value, name) => {
-  placeForResults.append(`${name} : ${value}`);
-  placeForResults.append(document.createElement("br"));
+toggleButton.addEventListener("click", () => {
+  navbarLinks.classList.toggle("active");
 });
