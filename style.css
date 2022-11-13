@@ -68,33 +68,46 @@ body {
 }
 .article1 {
   background-color: red;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
   grid-area: art1;
-  display: flex;
-  height: 350px;
   border: #24252a solid;
   margin: auto;
   width: 100%;
+  height: 400px;
+  grid-template-areas: "model slogan";
+  align-items: center;
+  justify-content: center;
+}
+.model1 {
+  grid-area: model;
+}
+.slogan {
+  grid-area: slogan;
+}
+.article1 img {
+  height: 395px;
+  width: 350px;
+  flex-shrink: 0;
 }
 .article1 h1 {
-  font-size: 50px;
+  font-size: 30px;
   margin: 0;
-  line-height: 40px;
-  padding: 100px 30px 30px;
   text-align: center;
 }
 .article2 {
   background-color: blue;
   grid-area: art2;
   display: flex;
-  break-inside: avoid-column;
-  list-style: none;
   text-align: center;
   align-items: center;
   padding: 0;
+  justify-content: space-around;
 }
 .article2 img {
-  height: 250px;
-  width: 265px;
+  width: 100%;
+  flex-shrink: 0;
   border: #24252a solid;
 }
 .article2 li {
@@ -127,14 +140,22 @@ body {
   border: #24252a solid;
 }
 .advertisement {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
   background-color: purple;
-  height: 200px;
+  height: 250px;
   border: #24252a solid;
+  grid-template-areas: "advert adcontent";
 }
 .advertisement img {
-  height: 200px;
-  width: 150px;
-  float: left;
+  grid-area: advert;
+  height: 245px;
+  width: 100%;
+  object-fit: fill;
+}
+.advertise-content {
+  grid-area: adcontent;
 }
 footer {
   background-color: #24252a;
@@ -212,5 +233,24 @@ footer {
       "art3"
       "art4"
       "footer";
+  }
+  .article1 {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    width: 100%;
+    gap: 0.5em;
+    max-height: fit-content;
+    grid-template-areas:
+      "model"
+      "slogan";
+    margin-bottom: 75px;
+  }
+  .article1 img {
+    height: 395px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .article2 {
+    flex-direction: column;
   }
 }
