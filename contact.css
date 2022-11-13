@@ -49,6 +49,19 @@ body {
   background-color: white;
   border-radius: 10px;
 }
+.container {
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 20px;
+  margin: 5px;
+}
+h3 {
+  text-align: center;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
 footer {
   background-color: #24252a;
   color: white;
@@ -114,5 +127,8 @@ footer {
   }
   .navbar-links.active {
     display: flex;
+  }
+  .container {
+    padding: 5px;
   }
 }
