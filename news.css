@@ -49,6 +49,30 @@ body {
   background-color: white;
   border-radius: 10px;
 }
+.blog {
+  padding: 0 10%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto;
+  grid-template-areas: "fullcontent sidebar";
+}
+.content {
+  grid-area: fullcontent;
+}
+.sidebar {
+  grid-area: sidebar;
+  margin: 35px;
+  border: #24252a solid;
+  padding: 15px;
+}
+.sidebar a {
+  text-decoration: none;
+  color: #24252a;
+}
+.sidebar h3 {
+  text-align: center;
+  padding-bottom: 20px;
+}
 footer {
   background-color: #24252a;
   color: white;
@@ -57,9 +81,9 @@ footer {
   align-items: center;
   justify-content: center;
   height: 75px;
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 100%; */
 }
 .social-media {
   margin: 15px;
@@ -114,5 +138,30 @@ footer {
   }
   .navbar-links.active {
     display: flex;
+  }
+  .blog {
+    padding: 0;
+    margin: 15px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "fullcontent"
+      "sidebar";
+  }
+  h1 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .sidebar {
+    margin: 10px;
+  }
+  .sidebar h3 {
+    padding: 0;
+  }
+  h3 {
+    text-align: center;
+    background-color: #555;
+    color: white;
   }
 }

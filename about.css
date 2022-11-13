@@ -66,6 +66,8 @@ footer {
   align-items: center;
   justify-content: center;
   height: 75px;
+  bottom: 0;
+  width: 100%;
 }
 .social-media {
   margin: 15px;

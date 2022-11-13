@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #24252a;
+  background-color: #0f3325;
   color: white;
 }
 .logo-title {
@@ -87,8 +87,8 @@ body {
   grid-area: slogan;
 }
 .article1 img {
-  height: 395px;
-  width: 350px;
+  /* height: 395px;
+  width: 350px; */
   flex-shrink: 0;
 }
 .article1 h1 {
@@ -158,7 +158,7 @@ body {
   grid-area: adcontent;
 }
 footer {
-  background-color: #24252a;
+  background-color: #0f3325;
   color: white;
   grid-area: footer;
   display: flex;
