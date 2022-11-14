@@ -98,7 +98,6 @@ h1 {
 .article1 img {
   max-width: 100%;
   height: auto;
-  /* border: #0f3325 solid 10px; */
 }
 .article1 h1 {
   font-size: 30px;
@@ -117,7 +116,8 @@ h1 {
 }
 .article2 img {
   width: 100%;
-  flex-shrink: 0;
+  height: auto;
+  border-bottom: #0f3325 solid;
 }
 .article2 div {
   margin: 0 5px;
@@ -158,8 +158,6 @@ h1 {
 .featured {
   align-items: center;
   justify-content: center;
-}
-.featured p {
 }
 .article4 {
   grid-area: art4;
@@ -246,7 +244,88 @@ footer {
   background: #e60023;
   color: white;
 }
-@media (max-width: 700px) {
+/* smallest phone screen */
+@media (max-width: 335px) {
+  .toggle-nav {
+    display: inline;
+  }
+  .navbar-links {
+    display: inline;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+  .logo-title {
+    text-align: center;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    width: 100%;
+    gap: 0.5em;
+    max-height: fit-content;
+    grid-template-areas:
+      "art1"
+      "art2"
+      "art3"
+      "art4"
+      "footer";
+    padding: 0;
+  }
+  .article1 {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    width: 100%;
+    gap: 0.5em;
+    max-height: fit-content;
+    grid-template-areas:
+      "model"
+      "slogan";
+  }
+  .article1 img {
+    margin: 0;
+  }
+  h1 {
+    margin: 0;
+  }
+  .article2 {
+    flex-direction: column;
+  }
+  .hairstyle {
+    margin-top: 25px;
+  }
+  .article3 {
+    display: block;
+    justify-content: center;
+  }
+  .featured {
+    margin: auto;
+  }
+  .article3 img {
+    float: none;
+  }
+  footer {
+    padding-left: 25px;
+  }
+}
+/* Most Phones, Tablets, Ipads */
+@media (min-width: 336px) and (max-width: 700px) {
   .toggle-nav {
     display: flex;
   }
@@ -322,32 +401,11 @@ footer {
     padding-left: 25px;
   }
 }
-@media (max-width: 335px) {
-  .toggle-nav {
-    display: inline;
-  }
-  .navbar-links {
-    display: inline;
-    width: 100%;
-  }
-  .navbar {
+
+/*Tablets & iPads portrait mode */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .article2 {
     flex-direction: column;
-    align-items: flex-start;
-  }
-  .navbar-links ul {
-    flex-direction: column;
-    width: 100%;
-  }
-  .navbar-links li {
-    text-align: center;
-  }
-  .navbar-links li a {
-    padding: 0.5rem 1rem;
-  }
-  .navbar-links.active {
-    display: flex;
-  }
-  .logotitle {
-    float: left;
+    margin: 0 65px;
   }
 }

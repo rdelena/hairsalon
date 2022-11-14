@@ -163,7 +163,66 @@ footer {
   background: #e60023;
   color: white;
 }
-@media (max-width: 700px) {
+/* small phone screen */
+@media (max-width: 335px) {
+  .toggle-nav {
+    display: inline;
+  }
+  .navbar-links {
+    display: inline;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+  .logo-title {
+    text-align: center;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    grid-template-areas:
+      "cut1"
+      "cut2"
+      "cut3"
+      "cut4"
+      "style1"
+      "style2"
+      "style3"
+      "style4"
+      "dye1"
+      "dye2"
+      "dye3"
+      "dye4"
+      "spa1"
+      "spa2"
+      "spa3"
+      "spa4";
+  }
+  footer {
+    padding-left: 25px;
+  }
+}
+/* Some Phones, Tablets, iPads */
+@media (min-width: 336px) and (max-width: 700px) {
   .toggle-nav {
     display: flex;
   }
@@ -187,5 +246,53 @@ footer {
   }
   .navbar-links.active {
     display: flex;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    grid-template-areas:
+      "cut1"
+      "cut2"
+      "cut3"
+      "cut4"
+      "style1"
+      "style2"
+      "style3"
+      "style4"
+      "dye1"
+      "dye2"
+      "dye3"
+      "dye4"
+      "spa1"
+      "spa2"
+      "spa3"
+      "spa4";
+  }
+  footer {
+    padding-left: 25px;
+  }
+}
+/*Tablets Ipads portrait mode */
+@media (min-width: 700px) and (max-width: 1024px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    grid-template-areas:
+      "cut1 cut2"
+      "cut3 cut4"
+      "style1 style2"
+      "style3 style4"
+      "dye1 dye2"
+      "dye3 dye4"
+      "spa1 spa2"
+      "spa3 spa4";
   }
 }
