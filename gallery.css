@@ -49,6 +49,75 @@ body {
   background-color: white;
   border-radius: 10px;
 }
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+  list-style: none;
+  padding: 0 5%;
+  grid-template-areas:
+    "cut1 cut2 cut3 cut4"
+    "style1 style2 style3 style4"
+    "dye1 dye2 dye3 dye4"
+    "spa1 spa2 spa3 spa4";
+  gap: 5px;
+  place-items: center;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h3 {
+  text-align: center;
+}
+.cut1 {
+  grid-area: cut1;
+}
+.cut2 {
+  grid-area: cut2;
+}
+.cut3 {
+  grid-area: cut3;
+}
+.cut4 {
+  grid-area: cut4;
+}
+.style1 {
+  grid-area: style1;
+}
+.style2 {
+  grid-area: style2;
+}
+.style3 {
+  grid-area: style3;
+}
+.style4 {
+  grid-area: style4;
+}
+.dye1 {
+  grid-area: dye1;
+}
+.dye2 {
+  grid-area: dye2;
+}
+.dye3 {
+  grid-area: dye3;
+}
+.dye4 {
+  grid-area: dye4;
+}
+.spa1 {
+  grid-area: spa1;
+}
+.spa2 {
+  grid-area: spa2;
+}
+.spa3 {
+  grid-area: spa3;
+}
+.spa4 {
+  grid-area: spa4;
+}
 footer {
   background-color: #24252a;
   color: white;
@@ -57,9 +126,9 @@ footer {
   align-items: center;
   justify-content: center;
   height: 75px;
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 100%; */
 }
 .social-media {
   margin: 15px;
