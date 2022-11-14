@@ -8,6 +8,10 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  background-image: url("img/darkgreen2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .navbar {
   display: flex;
@@ -35,7 +39,7 @@ body {
   display: block;
 }
 .navbar-links li:hover {
-  background-color: #555;
+  background-color: #2d6e54;
 }
 .toggle-nav {
   position: absolute;
@@ -70,11 +74,11 @@ body {
   background-image: url("img/backgroundflowers.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
-  border: #24252a solid;
+  border: #0f3325 solid;
   grid-template-areas: "model slogan";
   align-items: center;
   justify-content: center;
@@ -94,6 +98,7 @@ h1 {
 .article1 img {
   max-width: 100%;
   height: auto;
+  /* border: #0f3325 solid 10px; */
 }
 .article1 h1 {
   font-size: 30px;
@@ -101,7 +106,6 @@ h1 {
   text-align: center;
 }
 .article2 {
-  /* background-color: blue; */
   grid-area: art2;
   display: flex;
   text-align: center;
@@ -109,6 +113,7 @@ h1 {
   padding: 0;
   justify-content: space-around;
   margin: 0 -5px;
+  margin-bottom: 25px;
 }
 .article2 img {
   width: 100%;
@@ -116,7 +121,8 @@ h1 {
 }
 .article2 div {
   margin: 0 5px;
-  border: #24252a solid;
+  border: #0f3325 solid;
+  background-color: white;
 }
 .article2 p {
   margin: 5px;
@@ -126,25 +132,34 @@ h1 {
   padding: 0.5em;
 }
 .article3 {
-  background-color: yellow;
   grid-area: art3;
-  display: block;
-  text-align: center;
-  border: #24252a solid;
+  border: #0f3325 solid;
+  background-color: white;
+  padding: 15px;
 }
 .article3 h2 {
   background-color: #24252a;
   color: white;
-  height: 55px;
-  width: 175px;
+  height: 50px;
+  width: 170px;
   font-size: 25px;
-  padding-top: 5px;
-  margin-left: 35px;
+  padding-top: 12px;
+  margin-left: 30px;
+  text-align: center;
+  margin-top: -30px;
+}
+.article3 h3 {
+  text-align: center;
 }
 .article3 img {
-  height: 150px;
-  width: 100px;
   float: left;
+  margin-right: 20px;
+}
+.featured {
+  align-items: center;
+  justify-content: center;
+}
+.featured p {
 }
 .article4 {
   grid-area: art4;
@@ -163,26 +178,26 @@ h1 {
 .hairstyle h3 {
   background-color: #24252a;
   color: white;
-  height: 55px;
-  width: 175px;
+  height: 50px;
+  width: 170px;
   font-size: 25px;
-  padding-top: 5px;
-  margin-left: 35px;
+  padding-top: 12px;
+  margin-left: 30px;
   text-align: center;
+  margin-top: -15px;
 }
 .hairstyle {
-  background-color: green;
   margin-bottom: 1em;
-  border: #24252a solid;
+  border: #0f3325 solid;
+  background-color: white;
 }
-
 .advertisement {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
-  background-color: purple;
-  border: #24252a solid;
+  border: #0f3325 solid;
   grid-template-areas: "advert adcontent";
+  background-color: white;
 }
 .advertisement img {
   width: 100%;
@@ -190,6 +205,8 @@ h1 {
 }
 .advertise-content {
   grid-area: adcontent;
+  text-align: center;
+  margin: auto;
 }
 footer {
   background-color: #0f3325;
@@ -287,5 +304,50 @@ footer {
   }
   .article2 {
     flex-direction: column;
+  }
+  .hairstyle {
+    margin-top: 25px;
+  }
+  .article3 {
+    display: block;
+    justify-content: center;
+  }
+  .featured {
+    margin: auto;
+  }
+  .article3 img {
+    float: none;
+  }
+  footer {
+    padding-left: 25px;
+  }
+}
+@media (max-width: 335px) {
+  .toggle-nav {
+    display: inline;
+  }
+  .navbar-links {
+    display: inline;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+  .logotitle {
+    float: left;
   }
 }
