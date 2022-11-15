@@ -8,6 +8,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  box-sizing: inherit;
 }
 .navbar {
   display: flex;
@@ -191,7 +192,6 @@ footer {
   footer {
     padding-left: 25px;
     bottom: 0;
-    position: absolute;
     width: 100%;
   }
 }
@@ -202,7 +202,6 @@ footer {
   }
   footer {
     bottom: 0;
-    position: absolute;
     width: 100%;
   }
 }
