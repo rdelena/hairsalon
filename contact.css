@@ -187,7 +187,7 @@ footer {
     margin-top: 15px;
     background-color: white;
     width: 100%;
-    padding-top: 25px;
+    padding: 25px 5%;
   }
   footer {
     padding-left: 25px;
@@ -199,10 +199,6 @@ footer {
 @media (min-width: 700px) and (max-width: 1024px) {
   .container {
     width: 80%;
-  }
-  footer {
-    bottom: 0;
-    width: 100%;
   }
 }
 /* Desktop Screen */

@@ -100,6 +100,8 @@ footer {
   align-items: center;
   justify-content: center;
   height: 75px;
+  bottom: 0;
+  width: 100%;
 }
 .social-media {
   margin: 15px;
@@ -251,5 +253,13 @@ footer {
   .sidebar {
     margin: 0;
     margin-left: 5px;
+  }
+}
+/* Large Screen max-width before footer transitions up */
+@media (min-width: 1483px) {
+  footer {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
   }
 }
